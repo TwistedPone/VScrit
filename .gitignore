@@ -1,1 +1,8 @@
-/a.out
+# Ignore compiled object files
+*.o
+*.obj
+*.out
+*.exe
+
+# Ignore editor-specific files
+.vscode/
