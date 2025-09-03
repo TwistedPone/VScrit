@@ -16,7 +16,7 @@
             "name": "Windows",
             "description": "Default settings for my cmake project",
             "hidden": false,
-            "generator": "Ninja",
+            "generator": "MinGW Makefiles",
             "binaryDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Debug",
