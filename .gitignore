@@ -4,5 +4,8 @@
 *.out
 *.exe
 
+# Ignore build directories
+build/
+
 # Ignore editor-specific files
 .vscode/
