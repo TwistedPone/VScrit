@@ -2,3 +2,6 @@
 	path = VScrit/vendor/imgui
 	url = https://github.com/ocornut/imgui.git
 	branch = docking
+[submodule "VScrit/vendor/SDL"]
+	path = VScrit/vendor/SDL
+	url = https://github.com/libsdl-org/SDL.git
