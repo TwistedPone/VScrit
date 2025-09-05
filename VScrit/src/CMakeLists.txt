@@ -19,7 +19,10 @@ target_include_directories(${PROJECT_NAME} PRIVATE
 )
 
 target_sources(${PROJECT_NAME} PRIVATE 
-    main.cpp
+    ${CMAKE_SOURCE_DIR}/VScrit/src/main.cpp
+    ${CMAKE_SOURCE_DIR}/VScrit/src/Render.cpp
+    ${CMAKE_SOURCE_DIR}/VScrit/src/Render.h
+    #${CMAKE_SOURCE_DIR}/VScrit/src
 )
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
