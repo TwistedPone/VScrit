@@ -546,19 +546,15 @@ namespace VScritImgui {
                 }
             }
 
+            // Start the Dear ImGui frame
             ImGui_ImplVulkan_NewFrame();
             ImGui_ImplSDL3_NewFrame();
             ImGui::NewFrame();
-
-            {
-                static ImGuiDockNodeFlags dockspace_flags = ImGuiDockNodeFlags_None;
-                ImGui::Begin("TEST");
-                for (auto& layer : m_LayerStack)
-                    layer->OnUIRender();
-                ImGui::End();
-            }
-
+            // This for loop calls the OnUpdate and OnUIRender functions in each layer
+            for (auto& layer : m_LayerStack)
+                layer->OnUIRender();
             ImGui::Render();
+
             ImDrawData* main_draw_data = ImGui::GetDrawData();
 			const bool main_is_minimized = (main_draw_data->DisplaySize.x <= 0.0f || main_draw_data->DisplaySize.y <= 0.0f);
 			wd->ClearValue.color.float32[0] = clear_color.x * clear_color.w;

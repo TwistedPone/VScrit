@@ -32,25 +32,23 @@ public:
 VScritImgui::Render* VScritImgui::CreateRender(int argc, char** argv)
 {
     VScritImgui::Render* render = new VScritImgui::Render();
-    std::cout << "We got this called!" << std::endl;
     render->PushLayer<ExampleLayer>();
-    render->SetMenuBarCallback([render]() 
-    {
-        std::cout << "This got called!" << std::endl;
-        if (ImGui::BeginMenu("File"))
-        {
-            if (ImGui::MenuItem("Exit"))
-                render->Close();
-            ImGui::EndMenu();
-        }
+    // render->SetMenuBarCallback([render]() 
+    // {
+    //     std::cout << "This got called!" << std::endl;
+    //     if (ImGui::BeginMenu("File"))
+    //     {
+    //         if (ImGui::MenuItem("Exit"))
+    //             render->Close();
+    //         ImGui::EndMenu();
+    //     }
         
-    });
+    // });
     
     return render;
 }
 
 int main(int argc, char** argv) {
-    std::cout << "IDK Why I need this!";
     static bool started = false;
     if(!started)
     {
